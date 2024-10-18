@@ -7,8 +7,8 @@ group_reporting
 time_based
 runtime=600
 numjobs=4
-name=raw-randread
-rw=randread
+name=raw-throughputread
+rw=read
 							
 [job1]
 filename=/dev/sdf
