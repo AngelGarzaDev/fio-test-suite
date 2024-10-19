@@ -11,7 +11,6 @@ numjobs=4
 [randomread]
 bs=4K
 iodepth=256
-direct=1
 ioengine=libaio
 group_reporting
 time_based
@@ -23,7 +22,6 @@ rw=randread
 [randomwrite]
 bs=4K
 iodepth=256
-direct=1
 ioengine=libaio
 group_reporting
 time_based
@@ -35,7 +33,6 @@ rw=randwrite
 [throughputread]
 bs=128K
 iodepth=64
-direct=1
 ioengine=libaio
 group_reporting
 time_based
@@ -47,7 +44,6 @@ rw=read
 [throughputwrite]
 bs=128K
 iodepth=64
-direct=1
 ioengine=libaio
 group_reporting
 time_based
