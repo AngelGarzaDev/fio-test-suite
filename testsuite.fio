@@ -1,6 +1,7 @@
 [global]
 filename=${FILENAME}
 direct=${DIRECT}
+size=${SIZE}
 ioengine=libaio
 group_reporting
 time_based
