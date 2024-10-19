@@ -12,10 +12,6 @@ numjobs=4
 bs=4K
 iodepth=256
 ioengine=libaio
-group_reporting
-time_based
-runtime=600
-numjobs=4
 name=raw-randread
 rw=randread
 
@@ -23,10 +19,6 @@ rw=randread
 bs=4K
 iodepth=256
 ioengine=libaio
-group_reporting
-time_based
-runtime=600
-numjobs=4
 name=raw-randwrite
 rw=randwrite
 
@@ -34,10 +26,6 @@ rw=randwrite
 bs=128K
 iodepth=64
 ioengine=libaio
-group_reporting
-time_based
-runtime=600
-numjobs=4
 name=raw-throughputread
 rw=read
 
@@ -45,9 +33,5 @@ rw=read
 bs=128K
 iodepth=64
 ioengine=libaio
-group_reporting
-time_based
-runtime=600
-numjobs=4
 name=raw-throughputread
 rw=write
