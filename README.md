@@ -6,3 +6,7 @@ To run test suite on a raw disk
 
 To run test suite on file system with caching
 ```FILENAME=/path/to/file DIRECT=0 SIZE=1TB fio testsuite.fio --output=testsuiteresults-fs.csv``
+
+
+TO DO:
+1. All jobs in a single job file run concurrently. Create bash script that will run jobs sequentially.
