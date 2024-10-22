@@ -1,7 +1,7 @@
 [global]
 bs=128K
 iodepth=64
-direct=1
+direct=${DIRECT}
 ioengine=libaio
 group_reporting
 time_based
