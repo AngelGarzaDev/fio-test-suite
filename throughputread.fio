@@ -11,4 +11,4 @@ name=raw-throughputread
 rw=read
 							
 [job1]
-filename=/dev/sdf
+filename=${FILENAME}

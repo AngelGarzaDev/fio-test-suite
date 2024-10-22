@@ -11,4 +11,4 @@ name=raw-randread
 rw=randread
 							
 [job1]
-filename=/dev/sdf
+filename=${FILENAME}
