@@ -10,5 +10,5 @@ numjobs=4
 name=raw-throughputread
 rw=read
 							
-[job3]
+[Continuous Read]
 filename=${FILENAME}
