@@ -30,6 +30,7 @@ fi
 
 # Other Variables
 direct=1
+diskinfo=$(lsblk $disk -o vendor,model,size,serial -n)
 
 echo -e "\nRunning random read test"
 FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio randomread.fio --output=resultsrandomread.csv &&
@@ -45,6 +46,4 @@ FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio throughputwrite.fio --output=
 
 echo -e "\nTest Complete"
 
-
-# Developemnt 
-# cd .. && rm -rf fio-test-suite/ && git clone https://github.com/AngelGarzaDev/fio-test-suite.git && cd fio-test-suite/ && chmod +x run.sh && clear && ./run.sh
+lsblk $disk -o vendor,model,size,serial -n
