@@ -47,4 +47,4 @@ echo -e "\nTest Complete"
 
 
 # Developemnt 
-# cd .. && rm -rf fio-test-suite/ && git clone https://github.com/AngelGarzaDev/fio-test-suite.git && cd fio-test-suite/ && chmod +x run.sh && ./run.sh
+# cd .. && rm -rf fio-test-suite/ && git clone https://github.com/AngelGarzaDev/fio-test-suite.git && cd fio-test-suite/ && chmod +x run.sh && clear && ./run.sh
