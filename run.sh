@@ -26,8 +26,8 @@ runtime=10
 
 FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio randomread.fio --output=resultsrandomread.csv &&
 
-FILENAME=$disk DIRECT=$direct fio randomwrite.fio --output=resultsrandomwrite.csv &&
+FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio randomwrite.fio --output=resultsrandomwrite.csv &&
 
-FILENAME=$disk DIRECT=$direct fio throughputread.fio --output=resultsthroughputread.csv &&
+FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio throughputread.fio --output=resultsthroughputread.csv &&
 
-FILENAME=$disk DIRECT=$direct fio throughputwrite.fio --output=resultsthroughputwrite.csv
+FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio throughputwrite.fio --output=resultsthroughputwrite.csv
