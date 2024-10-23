@@ -9,6 +9,7 @@ echo "It will overwrite data on the specified disk."
 echo "DO NOT run this on any disk with data you wish to keep!"
 echo "$disklist"
 read -p "Enter the target disk (e.g., /dev/sdb): " disk
+read -p "Enter the test runtime in seconds": runtime
 #read -p "Use caching during test (0/1)" direct
 
 # Validate that the disk variable is not empty
@@ -26,12 +27,15 @@ fi
 
 # Other Variables
 direct=1
-runtime=300
 
+echo -e "Running random read test"
 FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio randomread.fio --output=resultsrandomread.csv --minimal &&
 
+echo -e "Running random write test"
 FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio randomwrite.fio --output=resultsrandomwrite.csv --minimal &&
 
+echo -e "Running continuous read test"
 FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio throughputread.fio --output=resultsthroughputread.csv --minimal &&
 
+echo -e "Running continuous write test"
 FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio throughputwrite.fio --output=resultsthroughputwrite.csv --minimal 
