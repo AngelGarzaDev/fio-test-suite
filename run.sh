@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get list of disks
-disklist=(lsblk -I 8 -o name,size,type,model,serial)
+disklist=$(lsblk -I 8 -o name,size,type,model,serial)
 
 # User input for disk
 echo "WARNING: This script is DESTRUCTIVE."
