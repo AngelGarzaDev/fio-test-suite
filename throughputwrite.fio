@@ -5,7 +5,7 @@ direct=${DIRECT}
 ioengine=libaio
 group_reporting
 time_based
-runtime=30
+runtime=${RUNTIME}
 numjobs=4
 name=raw-throughputread
 rw=write

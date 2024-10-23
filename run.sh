@@ -22,8 +22,9 @@ fi
 
 # Other Variables
 direct=1
+runtime=300
 
-FILENAME=$disk DIRECT=$direct fio randomread.fio --output=resultsrandomread.csv &&
+FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio randomread.fio --output=resultsrandomread.csv &&
 
 FILENAME=$disk DIRECT=$direct fio randomwrite.fio --output=resultsrandomwrite.csv &&
 
