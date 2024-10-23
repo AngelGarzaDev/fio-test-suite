@@ -1,9 +1,13 @@
 #!/bin/bash
 
+# Get list of disks
+disklist=(lsblk -I 8 -o name,size,type,model,serial)
+
 # User input for disk
 echo "WARNING: This script is DESTRUCTIVE."
 echo "It will overwrite data on the specified disk."
 echo "DO NOT run this on any disk with data you wish to keep!"
+echo "$disklist"
 read -p "Enter the target disk (e.g., /dev/sdb): " disk
 #read -p "Use caching during test (0/1)" direct
 
