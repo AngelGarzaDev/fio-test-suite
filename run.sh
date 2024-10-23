@@ -31,19 +31,19 @@ fi
 # Other Variables
 direct=1
 
-echo -e "Running random read test\n"
+echo -e "\nRunning random read test"
 FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio randomread.fio --output=resultsrandomread.csv --minimal &&
 
-echo -e "Running random write test\n"
+echo -e "\nRunning random write test"
 FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio randomwrite.fio --output=resultsrandomwrite.csv --minimal &&
 
-echo -e "Running continuous read test\n"
+echo -e "\nRunning continuous read test"
 FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio throughputread.fio --output=resultsthroughputread.csv --minimal &&
 
-echo -e "Running continuous write test\n"
+echo -e "\nRunning continuous write test"
 FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio throughputwrite.fio --output=resultsthroughputwrite.csv --minimal 
 
-
+echo -e "\nTest Complete"
 
 
 # Developemnt 
