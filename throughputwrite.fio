@@ -1,5 +1,5 @@
 [global]
-bs=128K
+bs=256K
 iodepth=64
 direct=${DIRECT}
 ioengine=libaio
