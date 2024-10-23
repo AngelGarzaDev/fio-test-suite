@@ -11,6 +11,7 @@ echo -e "$disklist\n"
 read -p "Enter the target disk (e.g., /dev/sdb): " disk
 read -p "Enter the test runtime in seconds": runtime
 #read -p "Use caching during test (0/1)" direct
+echo ""
 
 # Validate that the disk variable is not empty
 if [[ -z "$disk" ]]; then
@@ -43,4 +44,5 @@ FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio throughputwrite.fio --output=
 
 
 
-# Developemnt cd .. && rm -rf fio-test-suite/ && git clone https://github.com/AngelGarzaDev/fio-test-suite.git && cd fio-test-suite/ && chmod +x run.sh && ./run.sh
+# Developemnt 
+# cd .. && rm -rf fio-test-suite/ && git clone https://github.com/AngelGarzaDev/fio-test-suite.git && cd fio-test-suite/ && chmod +x run.sh && ./run.sh
