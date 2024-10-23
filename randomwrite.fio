@@ -10,5 +10,5 @@ numjobs=4
 name=raw-randwrite
 rw=randwrite
 							
-[job1]
+[job2]
 filename=${FILENAME}
