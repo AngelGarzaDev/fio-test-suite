@@ -4,10 +4,10 @@
 disklist=$(lsblk -I 8 -o name,size,type,model,serial)
 
 # User input for disk
-echo "\nWARNING: This script is DESTRUCTIVE."
-echo "It will overwrite data on the specified disk."
-echo "DO NOT run this on any disk with data you wish to keep!\n"
-echo "$disklist\n"
+echo -e "\nWARNING: This script is DESTRUCTIVE."
+echo -e "It will overwrite data on the specified disk."
+echo -e "DO NOT run this on any disk with data you wish to keep!\n"
+echo -e "$disklist\n"
 read -p "Enter the target disk (e.g., /dev/sdb): " disk
 read -p "Enter the test runtime in seconds": runtime
 #read -p "Use caching during test (0/1)" direct
