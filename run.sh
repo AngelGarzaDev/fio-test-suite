@@ -4,10 +4,10 @@
 disklist=$(lsblk -I 8 -o name,size,type,model,serial)
 
 # User input for disk
-echo "WARNING: This script is DESTRUCTIVE."
+echo "\nWARNING: This script is DESTRUCTIVE."
 echo "It will overwrite data on the specified disk."
-echo "DO NOT run this on any disk with data you wish to keep!"
-echo "$disklist"
+echo "DO NOT run this on any disk with data you wish to keep!\n"
+echo "$disklist\n"
 read -p "Enter the target disk (e.g., /dev/sdb): " disk
 read -p "Enter the test runtime in seconds": runtime
 #read -p "Use caching during test (0/1)" direct
@@ -28,14 +28,19 @@ fi
 # Other Variables
 direct=1
 
-echo -e "Running random read test"
+echo -e "Running random read test\n"
 FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio randomread.fio --output=resultsrandomread.csv --minimal &&
 
-echo -e "Running random write test"
+echo -e "Running random write test\n"
 FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio randomwrite.fio --output=resultsrandomwrite.csv --minimal &&
 
-echo -e "Running continuous read test"
+echo -e "Running continuous read test\n"
 FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio throughputread.fio --output=resultsthroughputread.csv --minimal &&
 
-echo -e "Running continuous write test"
+echo -e "Running continuous write test\n"
 FILENAME=$disk DIRECT=$direct RUNTIME=$runtime fio throughputwrite.fio --output=resultsthroughputwrite.csv --minimal 
+
+
+
+
+# Developemnt cd .. && rm -rf fio-test-suite/ && git clone https://github.com/AngelGarzaDev/fio-test-suite.git && cd fio-test-suite/ && chmod +x run.sh && ./run.sh
